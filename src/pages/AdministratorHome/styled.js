@@ -76,6 +76,7 @@ export const InputSubmit = styled.input`
     color: white;
     font-weight: bolder;
     outline: none;
+    cursor: pointer;
 `;
 
 export const InputReset = styled.input`
@@ -87,6 +88,7 @@ export const InputReset = styled.input`
     color: #212529;
     font-weight: bolder;
     outline: none;
+    cursor: pointer;
 `;
 
 export const Navbar = styled.nav`
