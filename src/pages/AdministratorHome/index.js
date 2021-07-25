@@ -45,7 +45,7 @@ export default function AdministratorHome() {
 	return (
 		<>
 			<S.LinkInferiorDireito href="https://br.freepik.com/vetores/tecnologia" target="_blank" rel="noreferrer">
-				Tecnologia vetor criado por gstudioimagen - br.freepik.com
+				Imagem de fundo retirada de: Tecnologia vetor criado por gstudioimagen - br.freepik.com
 			</S.LinkInferiorDireito>
 				<S.LinkInferiorEsquerdo href="https://github.com/MarlonMazzine/hiring-coders-desafio-2" target="_blank" rel="noreferrer">
 					Github
