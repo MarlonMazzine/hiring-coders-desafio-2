@@ -3,7 +3,7 @@ import AdministratorHome from './pages/AdministratorHome'
 
 function App() {
   return (
-    <div class="container-app">
+    <div className="container-app">
       <AdministratorHome/>
     </div>
   );
