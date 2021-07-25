@@ -1,13 +1,14 @@
 import { useState } from "react";
 import banner from "../../assets/58670.jpg";
+import logo from "../../assets/logo.png";
 import * as S from './styled'
 
 export default function AdministratorHome() {
 	const [ nome, setNome ] = useState('')
     const [ documento, setDocumento ] = useState('')
     const [ telefone, setTelefone ] = useState('')
+    const [ email, setEmail ] = useState('')
     const [ nascimento, setNascimento ] = useState('')
-    const [ endereco, setEndereco ] = useState('')
 	
 	const [ descricao, setDescricao ] = useState('')
 	const [ plataforma, setPlataforma ] = useState('')
@@ -20,8 +21,8 @@ export default function AdministratorHome() {
 			nome: nome,
 			documento: documento,
 			telefone: telefone,
-			nascimento: nascimento,
-			endereco: endereco
+			email: email,
+			nascimento: nascimento
 		})
 
 		localStorage.setItem('Cliente', cliente)
@@ -46,15 +47,14 @@ export default function AdministratorHome() {
 			<S.LinkInferiorDireito href="https://br.freepik.com/vetores/tecnologia" target="_blank" rel="noreferrer">
 				Tecnologia vetor criado por gstudioimagen - br.freepik.com
 			</S.LinkInferiorDireito>
-				<S.LinkInferiorEsquerdo href="https://br.freepik.com/vetores/tecnologia" target="_blank" rel="noreferrer">
+				<S.LinkInferiorEsquerdo href="https://github.com/MarlonMazzine/hiring-coders-desafio-2" target="_blank" rel="noreferrer">
 					Github
 				</S.LinkInferiorEsquerdo>
 
 			<S.Banner src={banner} alt="Banner do site" />
 
 			<S.Navbar>
-				<p>Logo do site</p>
-				<p>Área administrativa</p>
+				<S.LogoImage src={logo} alt="Logo Gama Games"></S.LogoImage>
 			</S.Navbar>
 
 			<S.ContainerAdministratorArea>
@@ -65,13 +65,12 @@ export default function AdministratorHome() {
                         <h2>Novo cadastro</h2>
                         <form onSubmit={handleClient}>
 							<S.Input type='text' placeholder="Nome completo" value={nome} onChange={e => setNome(e.target.value)} required/>
-							<S.Input type='text' placeholder="Documento" value={documento} onChange={e => setDocumento(e.target.value)} required/>
-							<S.Input type='text' placeholder="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} required/>
-							<S.Input type='text' placeholder="Data de nascimento" value={nascimento} onChange={e => setNascimento(e.target.value)} required/>
-							<S.Input type='text' placeholder="Endereço" value={endereco} onChange={e => setEndereco(e.target.value)} required/>
+							<S.Input type='number' placeholder="CPF/CNPJ" value={documento} onChange={e => setDocumento(e.target.value)} required/>
+							<S.Input type='tel' placeholder="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} required/>
+							<S.Input type='text' placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required/>
+							<S.Input type='date' placeholder="Data de nascimento" value={nascimento} onChange={e => setNascimento(e.target.value)} required/>
                             <S.ContainerFlexArround>
 								<S.InputSubmit type='submit' value="Salvar"/>
-								<S.InputReset type='reset' value="Limpar"/>
                             </S.ContainerFlexArround>
                         </form>
                     </S.CotnainerForm>
@@ -86,12 +85,11 @@ export default function AdministratorHome() {
                                 <option value="PS4">PS4</option>
                                 <option value="XBOX">XBOX</option>
                             </S.Select>
-							<S.Input type='text' placeholder="Quantidade" value={quantidade} onChange={e => setQuantidade(e.target.value)} required/>
+							<S.Input type='number' placeholder="Quantidade" value={quantidade} onChange={e => setQuantidade(e.target.value)} required/>
 							<S.Input type='text' placeholder="Preço de custo R$" value={precoDeCusto} onChange={e => setPrecoDeCusto(e.target.value)} required/>
 							<S.Input type='text' placeholder="Preço de venda R$" value={precoDeVenda} onChange={e => setPrecoDeVenda(e.target.value)} required/>
                             <S.ContainerFlexArround>
 								<S.InputSubmit type='submit' value="Salvar"/>
-								<S.InputReset type='reset' value="Limpar"/>
                             </S.ContainerFlexArround>
                         </form>
                     </S.CotnainerForm>

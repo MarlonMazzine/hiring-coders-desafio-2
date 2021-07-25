@@ -44,7 +44,7 @@ export const ContainerBoxSizing = styled.div`
 
 export const ContainerAdministratorArea = styled.div`
     width: 1000px;
-    height: 590px;
+    height: 540px;
     background-color: white;
     z-index: 999;
     position: absolute;
@@ -56,6 +56,11 @@ export const ContainerAdministratorArea = styled.div`
     text-align: center;
     border-radius: 10px;
     color: #5A189A;
+`;
+
+export const LogoImage = styled.img`
+    width: 100px;
+    height: 100px;
 `;
 
 export const Input = styled.input`
@@ -74,18 +79,6 @@ export const InputSubmit = styled.input`
     margin-bottom: 15px;
     background-color: #5A189A;
     color: white;
-    font-weight: bolder;
-    outline: none;
-    cursor: pointer;
-`;
-
-export const InputReset = styled.input`
-    width: 35%;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    background-color: #CED4DA;
-    color: #212529;
     font-weight: bolder;
     outline: none;
     cursor: pointer;
